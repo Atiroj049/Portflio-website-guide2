@@ -117,6 +117,48 @@ function typeWriter() {
 // Start typing animation
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 1000);
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    music.volume = 0.015;
+
+    if (music && toggleBtn) {
+        music.play().then(() => {
+            toggleBtn.textContent = '⏸ หยุดเพลง';
+        }).catch(() => {
+            console.log('Autoplay ถูกบล็อก ต้องให้ผู้ใช้คลิกก่อน');
+        });
+
+        toggleBtn.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                toggleBtn.textContent = '⏸ หยุดเพลง';
+            } else {
+                music.pause();
+                toggleBtn.textContent = '▶ เล่นเพลง';
+            }
+        });
+    }
+     const customCursor = document.createElement('div');
+    customCursor.classList.add('custom-cursor');
+    document.body.appendChild(customCursor);
+
+    document.body.style.cursor = 'none'; // ซ่อนเคอร์เซอร์ปกติ
+
+    document.addEventListener('mousemove', e => {
+        customCursor.style.top = `${e.clientY}px`;
+        customCursor.style.left = `${e.clientX}px`;
+
+        // Highlight sparkle effect (ถ้าต้องการ)
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        sparkle.style.top = `${e.clientY}px`;
+        sparkle.style.left = `${e.clientX}px`;
+        document.body.appendChild(sparkle);
+        setTimeout(() => {
+            sparkle.remove();
+        }, 800);
+    });
 });
 
 // Back to Top Button
@@ -136,6 +178,7 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
 
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-icon');
