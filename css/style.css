@@ -547,7 +547,7 @@ body {
     transform: translateY(-2px);
 }
 
-<<<<<<< HEAD
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -660,7 +660,6 @@ body {
   transition: top 0.01s linear, left 0.01s linear;
 }
 
-=======
 /* Dark Mode Styles */
 [data-theme="dark"] {
     --bg-color: #1a1a1a;
@@ -758,4 +757,4 @@ body {
     width: 0%;
     transition: width 0.1s ease;
 }
->>>>>>> 33ed1f8d027f4406f477b6e8abdf2264c9b29565
+
