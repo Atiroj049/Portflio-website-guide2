@@ -179,8 +179,7 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-<<<<<<< HEAD
-=======
+
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-icon');
 const currentTheme = localStorage.getItem('theme') || 'light';
@@ -220,4 +219,3 @@ window.addEventListener('scroll', () => {
     
     document.querySelector('.progress-bar').style.width = scrollPercent + '%';
 });
->>>>>>> 33ed1f8d027f4406f477b6e8abdf2264c9b29565
