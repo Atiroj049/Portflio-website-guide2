@@ -21,12 +21,22 @@
 
 Portflio-website-guide2/
 │
-├── css/style.css # ไฟล์จัดการสไตล์
-├── images/cursor.png profile1.png # ไฟล์รูปต่างๆ
-├── js/script.js # ไฟล์สคริปต์ JavaScript
-├── music/for html .mp3 # เพลง
-└── README.md # แนะนำเว็บไซต์
-└── index.html # หน้าหลัก
+├── index.html               # หน้าเว็บไซต์หลัก
+├── README.md                # คำอธิบายโปรเจกต์
+│
+├── css/
+│   └── style.css            # ไฟล์กำหนดสไตล์ CSS ทั้งหมด
+│
+├── js/
+│   └── script.js            # ไฟล์ควบคุมฟังก์ชัน JavaScript
+│
+├── images/
+│   ├── cursor.png           # รูปภาพเคอร์เซอร์แบบกำหนดเอง
+│   └── profile1.png         # รูปภาพโปรไฟล์
+│
+└── music/
+    └── for html .mp3        # เพลงพื้นหลังสำหรับเว็บ
+
 
 
 ## 🚀 วิธีใช้งาน
