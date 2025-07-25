@@ -23,11 +23,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
+
+    background-color: var(--navbar-bg);
+    color: var(--text-color);
 }
 
 .nav-container {
@@ -106,9 +108,13 @@ body {
     display: flex;
     align-items: center;
     padding: 100px 20px 50px;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
+
+    background: var(--hero-bg);
+    color: var(--text-color);
+
+    transition: background 0.5s ease, color 0.3s ease;
 }
+
 
 .hero:hover {
     background: linear-gradient(135deg,#2575fc  0%,  #6a11cb 100%);
@@ -195,7 +201,7 @@ body {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #2c3e50;
+    color: var(--section-title-color);
 }
 
 /* About Section */
@@ -417,7 +423,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--navbar-bg);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -758,3 +764,38 @@ body {
     transition: width 0.1s ease;
 }
 
+:root {
+  --navbar-bg: #ffffff;
+  --hero-bg: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  --hero-bg-hover: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  --text-color: #000000;
+  --section-title-color: #2c3e50;
+}
+
+[data-theme="dark"] {
+  --navbar-bg: #000000;
+  --hero-bg: linear-gradient(135deg, #000000 0%, #6a619c 100%);
+  --hero-bg-hover: linear-gradient(135deg, #6a619c 0%, #000000 100%);
+  --text-color: #ffffff;
+   --section-title-color: #f39c12;
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
+
+/* ใช้ตัวแปรแทนสี background hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px 50px;
+  background: var(--hero-bg);
+  color: var(--text-color);
+  transition: background 0.5s ease;
+}
+
+.hero:hover {
+  background: var(--hero-bg-hover);
+}
