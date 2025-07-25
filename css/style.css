@@ -652,7 +652,7 @@ body {
   pointer-events: none;
   width: 32px;   /* กำหนดขนาดเคอร์เซอร์ */
   height: 32px;
-  background-image: url('/images/cursor.png'); /* ใส่พาธไฟล์รูป PNG เคอร์เซอร์ */
+  background-image: url('../images/cursor.png'); /* ใส่พาธไฟล์รูป PNG เคอร์เซอร์ */
   background-size: contain;
   background-repeat: no-repeat;
   transform: translate(-16px, -16px); /* กำหนด hotspot ที่กลางภาพ (ครึ่งขนาด) */
